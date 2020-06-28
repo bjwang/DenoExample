@@ -1,0 +1,10 @@
+{
+  "$schema": "https://deno.land/x/denon/schema.json",
+  "scripts": {
+    "start": {
+      "cmd": "deno run -A app.ts",
+      "desc": "run my app.ts file"
+    }
+  }
+}
+
