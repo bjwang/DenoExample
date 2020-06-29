@@ -1,4 +1,4 @@
-import { Application, Context } from "https://deno.land/x/oak/mod.ts";
+import { Application } from "https://deno.land/x/oak/mod.ts";
 import { viewEngine, engineFactory, adapterFactory } from "https://deno.land/x/view_engine/mod.ts";
 
 import { APP_HOST, APP_PORT } from "./config.ts";
@@ -34,9 +34,9 @@ app.use(router.allowedMethods());
 
 console.log(`Listening on port ${APP_PORT}...`);
 
-app.addEventListener("error", (evt) => {
+app.addEventListener("error", (err) => {
   // Will log the thrown error to the console.
-  console.log(evt.error);
+  console.log(err.error);
 });
 
 await app.listen(`${APP_HOST}:${APP_PORT}`);
